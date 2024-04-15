@@ -5,13 +5,17 @@
   "author": "Sagar",
   "description": "cicd_action",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "test": "mocha ./tests/**/*.test.js"
   },
   "license": "MIT",
   "dependencies": {
+    "chai": "^5.1.0",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
+    "mocha": "^10.4.0",
     "mongoose": "^8.3.1",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "supertest": "^6.3.4"
   }
 }
