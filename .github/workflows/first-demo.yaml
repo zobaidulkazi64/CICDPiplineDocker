@@ -1,0 +1,35 @@
+name: frist-demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "All tests Started"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - run: echo "All tests passed"
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+      - name: List Files
+        run: ls ${{ github.workspace }}
+      - name: Print environment variables
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: "echo $GITHUB_REPOSITORY"
+      - name: Print environment variables
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: "echo $GITHUB_REPOSITORY"
