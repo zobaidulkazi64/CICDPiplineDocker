@@ -2,6 +2,11 @@
   "name": "cicd_action",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Sagar",
+  "description": "cicd_action",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
